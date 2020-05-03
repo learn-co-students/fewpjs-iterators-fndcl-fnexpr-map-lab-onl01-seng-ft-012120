@@ -12,5 +12,16 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  let newTutorials = tutorials.map(toUpperCase)
+  console.log(newTutorials)
+  return newTutorials
 }
+
+
+function toUpperCase(string) {
+  return string.split(" ").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+}
+
+// slice() method returns a shallow copy of a portion of an array into a new array object
+// toUpperCase() method is used to convert the string value to uppercase.
+
